@@ -35,34 +35,34 @@ Press save and deploy.
 
 the initial build can take a min or so to build but all future builds will be much faster after you enable the experimenal option to cache the builds.
 
-
 ## Cloudflare _redirect option
 
 To have the _redirect file generated, enable the key "ENABLE_REDIRECTS" in the links.json and make sure each link redirect array has a valid json object arrays
 
-```json
-[
-{
-            "brand": "github",
-            "icon": "github",
-            "name": "GitHub",
-            "link": "/github",
-            "redirects":
-            [
-                {
-                    "src": "/github",
-                    "dest": "https://github.com/xstar97",
-                    "code": 308
-                }
-            ]
-        }
-]
+```yaml
+ENABLE_REDIRECTS: true
+LINKS:
+  - brand: github
+    icon: github
+    name: GitHub
+    link: /github
+    redirects:
+      - src: /github
+        dest: https://github.com/xstar97
+        code: 308
+
 ```
 
 if this is not something you need or want to use at all, it can be  disabled and set to null and the link key should be set to a valid url like so.
 
-```json
+```yaml
 "ENABLE_REDIRECTS": false
+LINKS:
+  - brand: github
+    icon: github
+    name: GitHub
+    link: /github
+    redirects:
 ```
 
 ```json
