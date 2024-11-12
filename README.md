@@ -6,9 +6,9 @@ This template project automates generating a [littlelink](https://github.com/set
 
 create a repo from this template and make it your own.
 
-Update the asset icon and favicon or delete them and just update the links.json's ICON_URL items with a url to a public accessible image.
+Update the asset icon and favicon or delete them and just update the config.yaml's ICON_URL items with a url to a public accessible image or a local one.
 
-update the links.json to add your links in the correct format.
+update the config.yaml to add your links in the correct format.
 
 the meta and bio items should be set accordingly, make it you.
 
@@ -56,7 +56,7 @@ LINKS:
 if this is not something you need or want to use at all, it can be  disabled and set to null and the link key should be set to a valid url like so.
 
 ```yaml
-"ENABLE_REDIRECTS": false
+ENABLE_REDIRECTS: false
 LINKS:
   - brand: github
     icon: github
